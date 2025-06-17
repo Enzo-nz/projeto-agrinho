@@ -1,79 +1,132 @@
-* {
+body {
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  background-color: #519b5b; /* Um cinza claro para o fundo */
 }
 
-body {
-  background-color: #2e7d32;
-  font-family: Arial, sans-serif;
-  color: white;
-}
-
-/* Menu Superior */
-.menu {
+header {
+  background-color: #063805; /* Um cinza escuro para o cabeçalho */
+  color: rgb(101, 216, 72);
   display: flex;
   justify-content: center;
-  background-color: #a089a0;
-  padding: 12px;
+  padding: 15px 0;
+  margin-bottom: 20px;
 }
 
-.menu button {
-  background-color: transparent;
-  border: none;
-  color: white;
+.menu-item {
   margin: 0 20px;
-  padding: 8px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 8px;
-  transition: background-color 0.3s;
+  font-weight: bold;
+  font-size: 1.2em;
 }
 
-.menu button:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+main {
+  width: 80%; /* Ajuste a largura conforme necessário */
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgb(32, 201, 150); /* Fundo branco para o conteúdo principal */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Conteúdo Principal */
-.container {
+.content-section {
   display: flex;
-  justify-content: center;
-  padding: 30px;
-  gap: 50px;
+  margin-bottom: 30px;
 }
 
-/* Coluna de imagens */
-.imagens {
+.top-section {
+  flex-direction: row; /* Imagens à esquerda, texto à direita */
+}
+
+.image-gallery {
+  flex: 1; /* Ocupa uma parte do espaço */
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  align-items: center;
+  gap: 10px; /* Espaço entre as imagens */
+  margin-right: 20px; /* Espaço entre as imagens e o texto */
 }
 
-.imagens img {
-  width: 100px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
-  object-fit: cover;
+.image-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px; /* Bordas levemente arredondadas */
 }
 
-/* Texto central */
-.conteudo {
-  max-width: 750px;
-  text-align: center;
-}
-
-.conteudo p {
-  font-size: 18px;
+.text-block {
+  flex: 2; /* Ocupa mais espaço para o texto */
   line-height: 1.6;
   text-align: justify;
 }
 
-/* Rodapé */
-.rodape {
-  text-align: center;
-  padding: 15px;
-  margin-top: 20px;
-  font-size: 15px;
-  color: white;
+.text-block p {
+  margin-bottom: 1em; /* Espaço entre os parágrafos */
+}
+
+.bottom-section {
+  flex-direction: column; /* Card abaixo */
+  align-items: center; /* Centraliza o card */
+  padding-top: 20px;
+  border-top: 1px solid #998b11; /* Linha divisória */
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  background-color: #498d63; /* Fundo mais claro para o card */
+  border: 1px solid #32a1af;
+  border-radius: 8px;
+  padding: 20px;
+  width: 70%; /* Largura do card */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 150px; /* Largura da imagem no card */
+  height: auto;
+  margin-right: 20px;
+  border-radius: 4px;
+}
+
+.card-text {
+  flex: 1;
+  font-size: 0.95em;
+  line-height: 1.5;
+}
+
+/* Responsividade básica */
+@media (max-width: 768px) {
+  .content-section {
+      flex-direction: column; /* Em telas menores, elementos empilham */
+  }
+
+  .image-gallery {
+      margin-right: 0;
+      margin-bottom: 20px;
+  }
+
+  .card {
+      flex-direction: column;
+      width: 90%;
+      text-align: center;
+  }
+
+  .card img {
+      margin-right: 0;
+      margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .menu-item {
+      margin: 10px 0;
+  }
+
+  main {
+      width: 95%;
+      padding: 10px;
+  }
 }
