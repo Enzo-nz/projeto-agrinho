@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #2e7d32;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+/* Menu Superior */
+.menu {
+  display: flex;
+  justify-content: center;
+  background-color: #a089a0;
+  padding: 12px;
+}
+
+.menu button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  margin: 0 20px;
+  padding: 8px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.menu button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Conteúdo Principal */
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  gap: 50px;
+}
+
+/* Coluna de imagens */
+.imagens {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.imagens img {
+  width: 100px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+  object-fit: cover;
+}
+
+/* Texto central */
+.conteudo {
+  max-width: 750px;
+  text-align: center;
+}
+
+.conteudo p {
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* Rodapé */
+.rodape {
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+  font-size: 15px;
+  color: white;
+}
